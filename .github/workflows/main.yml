@@ -20,5 +20,5 @@ jobs:
       - name: tree コマンドを実行
         run: |
             tree .;
-            git diff
+            git diff;
 
