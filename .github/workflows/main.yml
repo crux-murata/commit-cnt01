@@ -31,5 +31,6 @@ jobs:
             cat ../tmp.txt > ../f.txt ;
             f=`cat ../f.txt` ;
             l=`cat ../0.txt` ;
+            echo "=== git diff コマンド実行します ==="
             git diff --name-only ${f} ${l}
 
