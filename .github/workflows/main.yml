@@ -1,0 +1,24 @@
+name: Deploy to WebServer
+
+on:
+  push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Package インストール
+        run: |
+            apt install -y tree
+
+      - name: ソースコードの Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ vars.DEPLOY_BRANCH }}
+          fetch-depth: 1
+
+      - name: tree コマンドを実行
+        run: |
+            tree .
+
