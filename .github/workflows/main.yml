@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: Package インストール
         run: |
-            apt install -y tree
+            sudo apt update;
+            sudo apt install -y tree;
 
       - name: ソースコードの Checkout
         uses: actions/checkout@v4
