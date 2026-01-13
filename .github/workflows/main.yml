@@ -15,7 +15,7 @@ jobs:
       - name: ソースコードの Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 3
+          fetch-depth: 5
 
       - name: tree コマンドを実行
         run: |
@@ -31,5 +31,5 @@ jobs:
             cat ../tmp.txt > ../f.txt ;
             f=`cat ../f.txt` ;
             l=`cat ../0.txt` ;
-            diff --name-only ${f} ${l}
+            git diff --name-only ${f} ${l}
 
