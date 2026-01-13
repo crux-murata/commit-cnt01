@@ -15,7 +15,7 @@ jobs:
       - name: ソースコードの Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 5
+          fetch-depth: 7
 
       - name: tree コマンドを実行
         run: |
@@ -33,6 +33,8 @@ jobs:
             l=`cat ../0.txt` ;
             echo "=== git diff コマンド実行します ==="
             echo "git diff --name-only ${f} ${l}"
+            cat ../f.txt
+            cat ../0.txt
             git diff --name-only ${f} ${l} > ../out.txt
             cat ../out.txt
             echo "=== 実行終了 ==="
