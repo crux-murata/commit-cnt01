@@ -24,7 +24,7 @@ jobs:
             i=0
             while read line;
             do
-              sed  -i 's|^commit ||g' $line; > ../tmp.txt ;
+              echo $line; > ../tmp.txt ;
               cat ../tmp.txt > ${i}.txt ;
               i=`expr 1 + $i`
             done < ../output.txt ;
