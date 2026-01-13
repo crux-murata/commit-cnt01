@@ -15,10 +15,10 @@ jobs:
       - name: ソースコードの Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 3
 
       - name: tree コマンドを実行
         run: |
             tree .;
-            git diff;
+            git log;
 
