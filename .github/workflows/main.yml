@@ -25,11 +25,11 @@ jobs:
             while read line;
             do
               echo $line; > ../tmp.txt ;
-              cat ../tmp.txt > ${i}.txt ;
+              cat ../tmp.txt > ../${i}.txt ;
               i=`expr 1 + $i`
             done < ../output.txt ;
             cat ../tmp.txt > ../f.txt ;
-            f=`cat f.txt` ;
-            l=`cat 0.txt` ;
+            f=`cat ../f.txt` ;
+            l=`cat ../0.txt` ;
             diff --name-only ${f} ${l}
 
