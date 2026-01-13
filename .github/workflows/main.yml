@@ -15,7 +15,6 @@ jobs:
       - name: ソースコードの Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ vars.DEPLOY_BRANCH }}
           fetch-depth: 1
 
       - name: tree コマンドを実行
